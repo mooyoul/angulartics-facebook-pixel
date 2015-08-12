@@ -1,0 +1,36 @@
+{
+  "name": "angulartics-facebook-pixel",
+  "version": "0.1.0",
+  "description": "Facebook Pixel plugin for Angulartics",
+  "main": "./lib/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "mkdir -p dist && uglifyjs lib/angulartics-facebook-pixel.js --compress --source-map dist/angulartics-facebook-pixel.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-facebook-pixel.min.js.map -o dist/angulartics-facebook-pixel.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mooyoul/angulartics-facebook-pixel.git"
+  },
+  "keywords": [
+    "angularjs",
+    "angulartics",
+    "analytics",
+    "facebook",
+    "pixel",
+    "facebook-pixel",
+    "angulartics-plugin"
+  ],
+  "author": "Moo Yeol, Lee (Prescott) <mooyoul@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mooyoul/angulartics-facebook-pixel/issues"
+  },
+  "homepage": "https://github.com/mooyoul/angulartics-facebook-pixel#readme",
+  "devDependencies": {
+    "uglify-js": "^2.4.24"
+  },
+  "dependencies": {
+    "angulartics": "^0.20.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "angulartics-facebook-pixel",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mooyoul/angulartics-facebook-pixel",
+  "authors": [
+    "Moo Yeol, Lee (Prescott) <mooyoul@gmail.com>"
+  ],
+  "description": "Facebook Pixel plugin for Angulartics",
+  "main": "./dist/angulartics-facebook-pixel.min.js",
+  "keywords": [
+    "angularjs",
+    "angulartics",
+    "analytics",
+    "facebook",
+    "pixel",
+    "facebook-pixel",
+    "angulartics-plugin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
