@@ -50,6 +50,29 @@ angular.module('myApp', [
 ]);
 ```
 
+## Consider using Upgraded pixel tracking code
+
+Facebook upgraded their pixel code which supports multiple PageViews.
+This is required when website uses Single Page Application.
+
+If you want to track PageView correctly, Please consider using upgraded code (like below):
+
+```html
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+              document,'script','//connect.facebook.net/en_US/fbevents.js');
+      fbq('init', YOUR_PIXEL_ID);
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1">
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+```
+
 ## Changes in the Facebook Pixel snippet
 
 The snippet code provided by Facebook Pixel does an automatic pageview hit, but this is already done by Angulartics (unless you disable it) so make sure to delete the tracking line:
@@ -62,6 +85,14 @@ The snippet code provided by Facebook Pixel does an automatic pageview hit, but 
 ```
 
 Done. Open your app, browse across the different routes and check [the Custom Audience Pixel page in Ads Manager](https://www.facebook.com/ads/manager/data_sources/pixels/) to see the hits.
+
+## Facebook Pixel Helper (Chrome Extension)
+
+The Facebook Pixel Helper is a troubleshooting tool that helps you validate your Facebook Conversion Pixel and Custom Audience Pixels.
+
+You can use this helper to validate that PageView was sent to facebook correctly.
+
+[See details on Facebook Official Documentation](https://developers.facebook.com/docs/ads-for-websites/pixel-troubleshooting), or [Download directly on Chrome Webstore](https://chrome.google.com/webstore/detail/fb-pixel-helper/fdgfkebogiimcoedlicjlajpkdmockpc)
 
 ## Documentation
 
