@@ -38,8 +38,20 @@
     <div ng-view></div>
     <hr>
 
+    <p>
+        <button analytics-on="click" analytics-event="ViewContent" class="btn btn-default">View Content</button>
+
+        <!-- same as analytics-on="click", because 'click' is the default -->
+        <button analytics-on analytics-event="AddToCart" analytics-category="Commands" class="btn btn-primary">Add to Cart</button>
+
+        <!-- same as analytics-event="Such Event", because is inferred from innerText -->
+        <button analytics-on analytics-category="Commands" analytics-value="wow" class="btn btn-success">Such Event</button>
+    </p>
+
+    <hr>
+
     <p class="alert alert-success">
-        Open the network inspector in your browser, click any of the nav options and you'll see the analytics
+        Open the network inspector in your browser, click any of the nav options or buttons above and you'll see the analytics
         request being executed. Then check <a class="alert-link" href="https://www.facebook.com/ads/manager/data_sources/pixels/" target="_blank">your Custom Audience Pixel page in Ads Manager</a>.
     </p>
 </div>
