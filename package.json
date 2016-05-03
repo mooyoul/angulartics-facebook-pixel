@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/mooyoul/angulartics-facebook-pixel#readme",
   "devDependencies": {
-    "uglify-js": "^2.4.24"
+    "uglify-js": "^2.6.2"
   },
   "dependencies": {
     "angulartics": "^1.0.3"
